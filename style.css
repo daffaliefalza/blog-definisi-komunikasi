@@ -1,0 +1,118 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+img {
+  object-fit: cover;
+}
+
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* HEADER START */
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+header p {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(213, 213, 213);
+}
+
+.author-header {
+  color: #000;
+}
+
+/* HEADER END */
+
+/* MAIN */
+article {
+  margin-bottom: 1rem;
+}
+
+.definition {
+  margin-bottom: 1rem;
+}
+
+.definition,
+.translation {
+  font-size: 1.2rem;
+}
+
+.author-quote {
+  font-size: 1rem !important;
+  font-style: italic;
+}
+
+.author h3 {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.author h3::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(35, 34, 34);
+  width: 15%;
+  height: 2px;
+  top: -10px;
+  left: 2px;
+}
+
+.author-image {
+  border-radius: 50%;
+}
+
+.author-wrapper {
+  margin: 15px 0;
+}
+
+.social-links a {
+  color: #000;
+}
+
+/* MAIN END */
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/* FOOTER END */
+
+/* below 800px */
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .author h3::before {
+    width: 5%;
+  }
+}
